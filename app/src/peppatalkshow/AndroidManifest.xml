@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--这里除了oppo渠道因为侵权外，请使用ic_launcher_old这个图标进行处理-->
+    <application
+        android:icon="@drawable/ic_launcher_old"
+        tools:replace="android:icon"
+        >
+        <activity
+            android:name="com.iyuba.talkshow.pappa.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:taskAffinity="com.iyuba.talkshow.pappa"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.iyuba.talkshow.pappa.wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:taskAffinity="com.iyuba.talkshow.pappa"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="10082816" />
+        <meta-data
+            android:name="MIPUSH_APPID"
+            android:value="\ 2882303761517126928" />
+
+        <meta-data
+            android:name="MIPUSH_APPKEY"
+            android:value="\ 5281712613928" />
+    </application>
+
+    <!--这里用于高版本的微信回调情况-->
+    <queries>
+        <package android:name="com.tencent.mm" />
+    </queries>
+</manifest>

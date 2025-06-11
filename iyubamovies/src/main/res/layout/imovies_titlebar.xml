@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/imv_video_titlebar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    android:orientation="horizontal"
+
+    >
+
+    <ImageView
+        android:id="@+id/imovies_title_back"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:src="@drawable/imovies_titile_back" />
+
+    <TextView
+        android:id="@+id/imovies_title_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="@string/imv_title_content"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/imovies_title_right"
+        android:layout_width="35dp"
+        android:layout_height="51dp"
+        android:layout_marginRight="3dp"
+        android:padding="6dp" />
+</LinearLayout>

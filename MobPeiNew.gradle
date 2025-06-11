@@ -1,0 +1,58 @@
+//com.iyuba.peiyin-英语配音秀
+apply plugin: 'com.mob.sdk'
+MobSDK {
+    appKey "2b2dd57c7f208"
+    appSecret "fe3d196f187a3b114e53c8a768b24bf0"
+    SecVerify {
+
+    }
+    ShareSDK {
+        devInfo {
+            loopShare true
+            Wechat {
+                id 1
+                sortId 1
+                appId "wxd1347f79e153a461"
+                appSecret "bfc6904f3da64dc3eefe3803a96841f3"
+                userName "gh_afb25ac019c9"
+                path "pages/index/index.html?id=1"
+                withShareTicket true
+                miniprogramType 2
+            }
+            QQ {
+                id 2
+                sortId 2
+                appId "1109662580"
+                appKey "olwZU981o3tOkHwm"
+            }
+            SinaWeibo {
+                id 6
+                sortId 6
+                appKey "2122951410"
+                appSecret "1da732328ff08bc9f4491d847d761e4f"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            WechatMoments {
+                id 3
+                sortId 3
+                appId "wxd1347f79e153a461"
+                appSecret "bfc6904f3da64dc3eefe3803a96841f3"
+            }
+            WechatFavorite {
+                id 4
+                sortId 4
+                AppId="wxd1347f79e153a461"
+                AppSecret="bfc6904f3da64dc3eefe3803a96841f3"
+            }
+            QZone {
+                id 5
+                sortId 5
+                appId "1109662580"
+                appKey "olwZU981o3tOkHwm"
+            }
+        }
+    }
+    SMSSDK {
+        autoSMS true
+    }
+}

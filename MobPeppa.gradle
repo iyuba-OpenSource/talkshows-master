@@ -1,0 +1,49 @@
+//com.iyuba.talkshow.pappa（小猪英语）
+apply plugin: 'com.mob.sdk'
+
+MobSDK {
+    appKey "351d58f090f34"
+    appSecret "85c0e79a3ccaaabd74472607c66d9b80"
+    SecVerify {
+    }
+//    permissions {
+//        exclude "android.permission.RECEIVE_SMS"
+//    }
+    ShareSDK {
+        loopShare true
+        devInfo {
+            Wechat {
+                AppId="wx02b3b557a8bb975c"
+                AppSecret="0e912e4119a87d0a7b90f245d32abb31"
+                userName "gh_d10f2662db31"
+                path "pages/index/index.html?id=1"
+                withShareTicket true
+                miniprogramType 0
+            }
+            QQ {
+                appId "1105953236"
+                appKey "idkPVDdY0xrxaoR9"
+            }
+            SinaWeibo {
+                appKey "2122951410"
+                appSecret "1da732328ff08bc9f4491d847d761e4f"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            WechatMoments {
+                AppId="wx02b3b557a8bb975c"
+                AppSecret="0e912e4119a87d0a7b90f245d32abb31"
+            }
+            WechatFavorite {
+                AppId="wx02b3b557a8bb975c"
+                AppSecret="0e912e4119a87d0a7b90f245d32abb31"
+            }
+            QZone {
+                appId "1105953236"
+                appKey "idkPVDdY0xrxaoR9"
+            }
+        }
+    }
+    SMSSDK {
+        autoSMS true
+    }
+}

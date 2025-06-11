@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:taskAffinity="com.iyuba.peiyin"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="100963259" />
+        <meta-data
+            android:name="MIPUSH_APPID"
+            android:value="\ 2882303761518077570" />
+
+        <meta-data
+            android:name="MIPUSH_APPKEY"
+            android:value="\ 5411807761570" />
+    </application>
+
+</manifest>

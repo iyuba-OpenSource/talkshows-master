@@ -1,0 +1,10 @@
+<resources>
+
+    <style name="ToolbarThemePrimary" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/pig_gray</item>
+        <item name="actionMenuTextColor">@color/pig_gray</item>
+        <item name="colorControlNormal">@color/pig_gray</item>
+    </style>
+
+</resources>

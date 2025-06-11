@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/item_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/price_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/iyubi_210" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/price_iv"
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="19.9元"
+                android:textColor="#ea3f13"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/price_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buy_iyubi_btn"
+                android:minHeight="0dp"
+                android:minWidth="0dp"
+                android:text="@string/buy_immediately"
+                android:textColor="@color/WHITE" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

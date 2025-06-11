@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-android-extensions'
+
+
+apply from: '../MobSDK.gradle'//英语口语秀
+//apply from: '../MobPeiNew.gradle'//英语配音秀
+//apply from: '../MobChildNew.gradle'//少儿英语
+//apply from: '../MobPeppa.gradle'//小猪英语
+
+android {
+    compileSdkVersion 33
+    buildToolsVersion '29.0.3'
+
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 31
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+    }
+
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//        }
+//    }
+
+}
+
+repositories {
+//    maven { url'https://dl.bintray.com/umsdk/release' }//友盟统计
+    flatDir {
+        dirs 'libs','../app/libs'
+    }
+    mavenCentral()
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //引入通用模块
+    implementation project(':lib_common')
+    //引入投屏模块
+    implementation project(path: ':dlna-lib')
+}

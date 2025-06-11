@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">英语口语秀</string>
+
+    <string name="tencent_share_id">tencent1105953236</string>
+
+    <string name="push_huawei_id">10803112</string>
+    <string name="push_huawei_secret">8d7432792957b2ae21d099095cc203c5</string>
+    <string name="push_mi_id">2882303761517544881</string>
+    <string name="push_mi_key">5111754478881</string>
+    <string name="push_mi_secret">JmuOc7+uF+XOClOgbLcRgA==</string>
+    <string name="push_oppo_id">3541069</string>
+    <string name="push_oppo_key">10Trq2s2WON44cws8Og040c0s</string>
+    <string name="push_oppo_secret">1027AD0B25c1f551a3Da0A03e57998A0</string>
+    <string name="push_oppo_master_secret">85438F541039e8Cf0ce037eD2AbB9F93</string>
+
+    <string name="file_provider_name_personal">com.iyuba.talkshow.fileprovider</string>
+
+    <string name="vip_localApp">1.会员尊享无广告内容\n2.会员尊享高速播放和下载通道\n3.非会员导出PDF需要20积分，会员无限制\n4.会员尊享保存视频到相册功能\n5.会员尊享视频播放和配音播放调速功能\n6.非会员配音评测3句，会员无限制\n7.会员尊享保存小视频的中文/英文/无字幕视频文件\n8.会员尊享保存小视频的英文/中英PDF文件\n更多VIP功能，Coming Soon...\n\nTip：本应用VIP仅在安卓版本的本应用内使用</string>
+    <string name="vip_allApp">1.会员尊享无广告内容\n2.会员尊享高速播放和下载通道\n3.非会员导出PDF需要20积分，会员无限制\n4.会员尊享保存视频到相册功能\n5.会员尊享视频播放和配音播放调速功能\n6.非会员配音评测3句，会员无限制\n7.会员尊享保存小视频的中文/英文/无字幕视频文件\n8.会员尊享保存小视频的英文/中英PDF文件\n更多VIP功能，Coming Soon...\n\nTip：全站VIP在iyuba所有APP内通用</string>
+</resources>

@@ -1,0 +1,321 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 31
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    api 'androidx.appcompat:appcompat:1.4.2'
+//    compileOnly 'androidx.recyclerview:recyclerview:1.0.0'
+
+    //引入retrofit
+    api "com.squareup.retrofit2:retrofit:2.9.0"
+    api "com.squareup.retrofit2:converter-gson:2.9.0"
+    api "com.squareup.retrofit2:adapter-rxjava2:2.9.0"
+    api "com.squareup.retrofit2:adapter-rxjava:2.9.0"
+    api "com.squareup.retrofit2:converter-scalars:2.9.0"
+    api("com.squareup.retrofit2:converter-simplexml:2.9.0") {
+        exclude group: 'xpp3', module: 'xpp3'
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'stax', module: 'stax'
+        exclude group: 'com.google.code.gson'
+    }
+
+    //引入gson
+    api "com.google.code.gson:gson:2.8.6"
+
+    //引入okhttp3
+    api "com.squareup.okhttp3:okhttp:3.12.0"
+    api "com.squareup.okhttp3:logging-interceptor:3.12.0"
+
+    //引入rxjava2
+    api "io.reactivex.rxjava2:rxandroid:2.1.0"
+    api "io.reactivex.rxjava2:rxjava:2.2.3"
+
+    //引入eventbus
+    api "org.greenrobot:eventbus:3.0.0"
+
+    //引入glide
+    api 'jp.wasabeef:glide-transformations:4.3.0'
+    api "com.github.bumptech.glide:glide:4.12.0"
+
+    //引入room
+    implementation 'androidx.room:room-runtime:2.4.0'
+    annotationProcessor 'androidx.room:room-compiler:2.4.0'
+    implementation 'androidx.room:room-rxjava2:2.4.0'
+
+    //aar包(所有的)
+//    api fileTree(include: ['*.?ar'], dir: '../lib_common/libs')
+
+    //xxpermission权限申请
+    api 'com.github.getActivity:XXPermissions:13.6'
+
+    /*********************************播放器*******************************/
+    //exoplayer播放器
+    api 'com.google.android.exoplayer:exoplayer:2.18.7'
+    api files('libs/player-exo-1.2.8-alpha01.aar')
+    //ijkplayer播放器
+    api files('libs/player-ijk-1.2.8.aar')
+    api files('libs/ijkplayer-arm64-0.8.8-modify.aar')
+    api files('libs/ijkplayer-armv7a-0.8.8-modify.aar')
+    api files('libs/ijkplayer-java-0.8.8-modify.aar')
+    api files('libs/ijkplayer-x86-0.8.8-modify.aar')
+    api files('libs/ijkplayer-x86_64-0.8.8-modify.aar')
+    //其他播放器
+    api files('libs/player-1.2.8.aar')
+    api files('libs/player-extended-1.2.8.aar')
+    //播放器
+    api files('libs/MediaPlayer-4.4.1.aar')
+    api files('libs/sonic-1.0.1.aar')
+
+    /*****************************视频模块********************************/
+    //视频模块-主体
+    api files('libs/headlinelibrary-1.7.9.aar')
+    //视频模块-配音功能
+    api files('libs/headlinetalk-1.3.7.aar')
+    api files('libs/intelligence-1.3.3.aar')
+    api files('libs/exomedia-4.3.0-modify-exo2.19.1.aar')
+    //视频模块-辅助
+    api files('libs/recycler-0.2.0.aar')
+    api files('libs/recycler-0.0.3.aar')
+    api files('libs/progresswheel-1.0.1.aar')
+    api "com.github.AnthonyFermin:DropDownView:1.0.1"
+    api files('libs/imagetextview-1.2.1.aar')
+    api files('libs/roundprogressbar-1.0.0.aar')
+    implementation("com.daimajia.swipelayout:library:1.2.0@aar") {
+        exclude group: 'com.android.support'
+    }
+    api files('libs/vpager-0.1.0.aar')
+    api files('libs/mse-0.2.5.aar')
+    api files('libs/mp3trans-0.2.0.aar')
+    api "com.github.naman14:TAndroidLame:1.1"
+    api files('libs/parse-0.2.3.aar')
+    api "androidx.viewpager2:viewpager2:1.1.0-alpha01"
+
+    /*******************************个人中心模块***************************/
+    //个人中心模块
+    api files('libs/personalhomelibrary-1.6.2.aar')
+    //用户信息模块
+    api files('libs/user-0.2.7.aar')
+    //个人中心-辅助
+    api "com.h6ah4i.android.widget.verticalseekbar:verticalseekbar:1.0.0"
+
+    /*********************************微课模块***************************/
+    //微课模块
+    api files('libs/imooclib-1.7.1.aar')
+
+    /*********************************收藏和下载模块*********************/
+    //收藏模块
+    api files('libs/basicfavor-1.2.8-alpha01.aar')
+    //下载模块
+    api files('libs/basicdl-1.2.3-alpha01.aar')
+
+    /********************************广告模块*****************************/
+    //oaid模块
+    api files('libs/oaid_sdk_2.5.1.aar')
+
+    //有道广告sdk
+    api files('libs/youdaosdk_4.3.2.aar')
+    api files('libs/data-youdao-0.1.8-fix2.aar')
+    api "com.airbnb.android:lottie:5.2.0"
+    api files('libs/adblocker-1.0.2.aar')
+    api files('libs/data-ydsdk-0.3.9-fix2.aar')
+
+    //爱语吧广告sdk
+    api files('libs/mediatom-0.3.9-fix.aar')
+    api files('libs/ydsdk-0.3.9-fix.aar')
+    api files('libs/s2s-0.3.9.aar')
+    api files('libs/sdk-0.3.9.aar')
+    api files('libs/data-iyuba-0.2.0-fix2.aar')
+
+    //信息流广告
+    api files('libs/mixnative-0.3.9-fix3.aar')
+
+    //爱语吧-倍孜
+    api files('libs/mediatom-adhub-adapt-0.3.9.aar')
+    api files('libs/beizi_ad_sdk_3.5.0.9.aar')
+    api files('libs/beizi_fusion_sdk_4.90.4.11.aar')
+
+    //爱语吧-百度
+    api files('libs/mediatom-bd-adapt-0.3.9-fix-bdv9.373.aar')
+    api files('libs/Baidu_MobAds_SDK-release_v9.373.aar')
+
+    //爱语吧-头条
+    api files('libs/mediatom-tt-adapt-0.3.9-fix4.aar')
+    api files('libs/open_ad_sdk_6.6.0.7.aar')
+
+    //爱语吧-腾讯
+    api files('libs/mediatom-tx-adapt-0.3.9-fix2.aar')
+    api files('libs/GDTSDK.unionNormal.4.620.1490.aar')
+
+    //爱语吧-快手
+    api files('libs/mediatom-ks-adapt-0.3.9.aar')
+    api files('libs/kssdk-ad-3.3.63-publishRelease-085cdfe109.aar')
+
+    //爱语吧-科大讯飞
+    api files('libs/mediatom-iflytek-adapt-0.3.9.aar')
+    api files('libs/IFLY_AD_6.0.10.aar')
+
+    //爱语吧-瑞狮
+    api files('libs/mediatom-vlion-adapt-0.3.9.aar')
+    api "cn.vlion.inland:vlion-core-ec:5.20.26"
+
+
+    /****************************网络加载框架**************************/
+    /****retrofit*****/
+    api "com.squareup.retrofit2:retrofit:2.3.0"
+    api "com.squareup.retrofit2:converter-gson:2.3.0"
+    api "com.squareup.retrofit2:converter-gson:2.3.0"
+    api "com.squareup.retrofit2:adapter-rxjava:2.3.0"
+    api "com.squareup.retrofit2:converter-scalars:2.3.0"
+    api("com.squareup.retrofit2:converter-simplexml:2.3.0") {
+        exclude group: 'xpp3', module: 'xpp3'
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'stax', module: 'stax'
+    }
+    /****okhttp****/
+    api "com.squareup.okhttp3:okhttp:3.8.0"
+    api "com.squareup.okhttp3:logging-interceptor:3.8.0"
+    /****rxjava****/
+    api "io.reactivex.rxjava2:rxandroid:2.1.0"
+    api "io.reactivex:rxandroid:1.1.0"
+    api 'io.reactivex.rxjava2:rxjava:2.2.3'
+    api "com.squareup.retrofit2:adapter-rxjava2:2.4.0"
+    /********gson*******/
+    api 'com.google.code.gson:gson:2.8.6'
+    /**********布局样式*****/
+    api 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    /**************************其他引入**************************/
+    //智能刷新，下拉加载
+    api('com.scwang.smartrefresh:SmartRefreshLayout:1.1.0') {
+        exclude group: 'com.android.support'
+    }
+    //圆形图片
+    api('de.hdodenhof:circleimageview:2.2.0') {
+        exclude group: 'com.android.support'
+    }
+    //打log
+    api "com.jakewharton.timber:timber:4.7.1"
+    //条幅
+    api('com.youth.banner:banner:1.4.10') {
+        exclude group: 'com.android.support'
+    }
+    //滑动控件
+    api('cn.bingoogolapple:bga-swipebacklayout:1.2.0@aar') {
+        exclude group: 'com.android.support'
+    }
+    //友盟统计，友盟分析
+    api 'com.umeng.umsdk:common:9.4.4'
+    api 'com.umeng.umsdk:asms:1.4.1'
+    api 'com.umeng.umsdk:apm:1.5.2'
+    //下载框架
+    api 'cn.aigestudio.downloader:Downloader:1.4.3'
+    //微信
+    api 'com.tencent.mm.opensdk:wechat-sdk-android:+'
+    //eventbus
+    api "org.greenrobot:eventbus:3.1.1"
+    //部分控件
+    api 'androidx.legacy:legacy-support-v4:1.0.0'
+    api 'androidx.recyclerview:recyclerview:1.1.0'
+    api 'androidx.cardview:cardview:1.0.0'
+    api 'androidx.annotation:annotation:1.1.0'
+    api 'androidx.percentlayout:percentlayout:1.0.0'
+    api 'com.google.android.material:material:1.6.1'
+    //分dex打包
+    api 'androidx.multidex:multidex:2.0.1'
+    api 'commons-codec:commons-codec:1.10'
+    //动画
+    api 'com.daimajia.easing:library:2.4@aar'
+    api 'com.daimajia.androidanimations:library:2.4@aar'
+    //侧滑返回，过时
+    api files('libs/Common-1.0.0.aar')
+    api files('libs/WheelPicker-1.0.0.aar')
+    //标签view
+    api 'com.github.linger1216:labelview:v1.1.2'
+    //gif
+    api 'pl.droidsonroids.gif:android-gif-drawable:1.2.6'
+    //照片
+    api "com.github.chrisbanes:PhotoView:2.1.0"
+    //圆角矩形shape开源库
+    api('com.flyco.roundview:FlycoRoundView_Lib:1.1.4@aar')
+    //各种工具类
+    api 'com.blankj:utilcodex:1.30.5'
+    api "com.github.xuexiangjys.XUtil:xutil-core:1.1.6"
+    api "com.github.xuexiangjys.XUtil:xutil-sub:1.1.6"
+    //郭霖的权限请求
+    api 'com.permissionx.guolindev:permissionx:1.4.0'
+    //防止连续点击，只用了一次
+    api 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    //调试-增加sqlitestudio软件的远程调试包
+    api files('libs/SQLiteStudioRemote.jar')
+    //阿里支付
+    api files('libs/alipaysdk-15.8.00.201112210139.aar')
+    //其他爱语吧模块
+    api files('libs/toolbox-1.1.0.aar')
+    api files('libs/commonvar-1.0.0.aar')
+    api "me.jessyan:retrofit-url-manager:1.4.0"
+    api files('libs/videocompressor-1.0.aar')
+    api files('libs/creator-1.0.0.aar')
+    api files('libs/mixed_converter-1.2.1.aar')
+    api files('libs/subtitle-1.2.2.aar')
+    api files('libs/fileuploader-1.2.1.aar')
+    api files('libs/textpage-1.2.1.aar')
+    api files('libs/resize-1.0.0.aar')
+//    api files('libs/msa_mdid_1.0.13.aar')
+    api files('libs/infores-1.3.0.aar')
+    api files('libs/popmenu-0.2.2.aar')
+    api files('libs/universitypicker-0.2.1.aar')
+    api files('libs/privacy-1.0.4.aar')
+    api files('libs/share-mob-0.1.3.aar')
+    api files('libs/share-0.1.3.aar')
+    api files('libs/waitdialog-1.2.1.aar')
+    api files('libs/mvp-1.0.0.aar')
+    api files('libs/dlex-1.0.4.aar')
+    api files('libs/commonres-1.2.0.aar')
+    api files('libs/calendarview-2.0.aar')
+    api 'com.google.zxing:core:3.3.3'
+    api files('libs/Sunflower.jar')
+
+    api('com.github.naman14:TAndroidLame:1.1') {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+
+    /********************************多渠道打包***************************/
+    //腾讯多渠道打包
+    api 'com.tencent.vasdolly:helper:3.0.6'
+    /*********************************三方控件****************************/
+    //滚轮控件
+    api 'com.github.weidongjian:androidWheelView:1.0.0'
+}

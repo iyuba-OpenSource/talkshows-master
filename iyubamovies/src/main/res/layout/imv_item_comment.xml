@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imv_user_pics"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/imovies_ic_circle_default"
+                android:layout_gravity="center" />
+
+            <ImageView
+                android:id="@+id/imv_comment_user_vips"
+                android:layout_width="35dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="-10dp"
+                android:src="@drawable/imovies_vip"
+                android:layout_below="@+id/imv_user_pics"
+                android:textColor="@color/imvs_comment_like_color" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/imv_comment_item_usernames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="2dp"
+            android:ellipsize="end"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:textColor="@color/imvs_comment_like_color"
+            android:text="123"
+            android:layout_marginTop="3dp"
+            android:textSize="15.0sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+
+        <TextView
+            android:id="@+id/imv_comment_like_counts"
+            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/imv_comment_normal_zan"
+            android:text="123"
+            android:padding="10dp"
+            android:drawablePadding="2dp"
+            android:textColor="@color/imvs_comment_like_color" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/imv_comment_item_contents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="-2.0dip"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="6.0dip"
+        android:textColor="@color/imvs_comment_content_color"
+        android:textSize="16.0sp" />
+
+
+    <TextView
+        android:id="@+id/imv_comment_item_sendtimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="7小时前"
+        android:layout_marginTop="10dp"
+        android:textColor="#b1b1b1"
+        android:layout_marginLeft="45dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/comment_show_lin"
+        android:background="#F8F8F1"
+        android:layout_marginLeft="45dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#F8F8F1"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/imv_comment_positions"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:background="@drawable/imovies_kuang"
+                android:text="1"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/imv_comment_names"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="username"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textColor="@color/imvs_comment_name_color"
+                android:textSize="15.0sp" />
+
+            <TextView
+                android:id="@+id/imv_comment_contents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="This is the content for a comment"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="-2.0dip"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="6.0dip"
+                android:textColor="@color/imvs_comment_content_color"
+                android:textSize="15.0sp" />
+        </LinearLayout>
+
+        <TextView
+            android:background="#F8F8F1"
+            android:id="@+id/imv_comment_citem_sendtime"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="left"
+            android:paddingLeft="10dp"
+            android:text="comment time"
+            android:textColor="#b1b1b1"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="gone"
+            android:background="#F8F8F1">
+
+            <TextView
+                android:id="@+id/imv_comment_position1"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:gravity="center"
+                android:background="@drawable/imovies_ic_circle_default"
+                android:text="1"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/imv_comment_name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:text="username"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textColor="@color/imvs_comment_name_color"
+                android:textSize="15.0sp" />
+
+            <TextView
+                android:id="@+id/imv_comment_content1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="This is the content for a comment"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="-2.0dip"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:lineSpacingExtra="6.0dip"
+                android:textColor="@color/imvs_comment_content_color"
+                android:textSize="15.0sp" />
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/imv_comment_citem_sendtime1"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginRight="3dp"
+            android:gravity="left"
+            android:text="comment time"
+            android:textColor="#b1b1b1"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/imv_get_mores"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="17.0sp"
+        android:text="@string/imv_get_more" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/imv_more_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginLeft="45dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

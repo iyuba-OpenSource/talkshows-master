@@ -1,0 +1,97 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+//    ext.kotlin_version = '1.4.21'
+    ext.kotlin_version = '1.7.20'
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url "http://developer.huawei.com/repo/" }
+
+        maven { url "https://mvn.mob.com/android" }
+
+        mavenCentral()
+        maven { url 'https://repo1.maven.org/maven2/' }
+        maven { url "https://jitpack.io" }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.0.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.mob.sdk:MobSDK:2018.0319.1724'
+
+//        classpath 'com.mob.sdk:MobSDK:+'
+
+        configurations.all {
+            resolutionStrategy.cacheDynamicVersionsFor 60*60, 'seconds'
+            resolutionStrategy.cacheChangingModulesFor 60*60, 'seconds'
+        }
+
+        //腾讯多渠道打包
+        classpath 'com.tencent.vasdolly:plugin:3.0.6'
+    }
+}
+allprojects {
+    repositories {
+        maven { url 'https://maven.aliyun.com/repository/public/' }
+        maven { url 'https://maven.aliyun.com/repository/google/' }
+        maven { url "http://developer.huawei.com/repo/" }
+//        google()
+
+        maven { url "https://mvn.mob.com/android" }
+
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url 'https://repo1.maven.org/maven2/' }
+
+        //广告-瑞狮相关引入
+        maven {
+            url "http://sdk.mentamob.com/repository/vlion/"
+            allowInsecureProtocol = true
+        }
+    }
+    tasks.withType(Javadoc) {
+        options.addStringOption('Xdoclint:none', '-quiet')
+        options.addStringOption('encoding', 'UTF-8')
+    }
+}
+ext {
+    compileSdkVersion = 29
+    minSdkVersion = 19
+    targetSdkVersion = 29
+    iyubaADVersion = '0.1.2'
+    retrofitVersion = '2.4.0'
+    okhttpVersion = '3.8.0'
+    rxandroidVersion = '2.1.0'
+    rxandroid1Version = '1.1.0'
+    rxjavaVersion = '1.3.0'
+    glideVersion = '3.8.0'
+    eventBusVersion = '3.1.1'
+    butterKnifeVersion = '10.0.0'
+    permissionDispatcherVersion = '4.8.0'
+    timberVersion = '4.7.1'
+    ijkVersion = '0.8.8@aar'
+    photoviewVersion = '2.0.0'
+    leakcanaryVersion = '1.6.1'
+    blankjVersion = '1.19.0'
+    roomdbVersion = '1.0.0'
+    xpushVersion = '1.0.1'
+    xutilVersion = '1.1.6'
+    subtitleVersion = '1.0.7'
+    dlexVersion = '1.0.2'
+    playerVersion = '1.2.5'
+    recyclerVersion = '0.0.3'
+    youdaoSdkVersion = '3.10.9'
+    circleImageVersion = '2.2.0'
+    smartRefreshVersion = '1.1.0'
+    bannerVersion = '1.4.10'
+    xutilVersion = '1.1.6'
+    mvpVersion = '1.0.0'
+    toolboxVersion = '1.0.2'
+
+    //视频模块
+    dropDownViewVersion = '1.0.1'
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

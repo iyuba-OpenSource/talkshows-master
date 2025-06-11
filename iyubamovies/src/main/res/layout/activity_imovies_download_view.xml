@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imovies_nav_left"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="15dp"
+            android:src="@drawable/imovies_circle_back" />
+
+        <TextView
+            android:id="@+id/imovies_center_title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:scrollHorizontally="true"
+            android:ellipsize="marquee"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="我的下载" />
+
+        <ImageView
+            android:id="@+id/imovies_nav_right_button"
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:gravity="center"
+            android:minWidth="50dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/basic_headlines_delete" />
+
+        <TextView
+            android:id="@+id/imovies_nav_right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="完成"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:minWidth="50dp"
+            android:layout_marginRight="10dp" />
+    </LinearLayout>
+
+    <TextView
+        android:padding="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/imvoies_download_text"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:background="#e6e6e6" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/imovies_download_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:padding="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/imovies_down_success"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:background="@color/gray"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/imovies_finish_lish"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

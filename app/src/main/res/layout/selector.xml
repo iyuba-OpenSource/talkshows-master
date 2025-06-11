@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    android:background="@color/WHITE">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="分类" />
+
+    <com.iyuba.talkshow.ui.list.MyRadioGroup
+        android:id="@+id/category_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="大第三" />
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+        </RadioGroup>
+
+        <RadioGroup
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+        </RadioGroup>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+        </RadioGroup>
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+                android:visibility="invisible"
+
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+                android:visibility="invisible"
+                style="@style/TypeSelect"
+                android:text="电影" />
+        </RadioGroup>
+        <!--<RadioGroup-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:weightSum="4.6"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<RadioButton-->
+                <!--style="@style/TypeSelect"-->
+                <!--android:text="电影" />-->
+
+            <!--&lt;!&ndash;<Space&ndash;&gt;-->
+                <!--&lt;!&ndash;style="@style/TypeSelect" />&ndash;&gt;-->
+            <!--&lt;!&ndash;<Space&ndash;&gt;-->
+                <!--&lt;!&ndash;style="@style/TypeSelect" />&ndash;&gt;-->
+            <!--&lt;!&ndash;<Space&ndash;&gt;-->
+                <!--&lt;!&ndash;style="@style/TypeSelect" />&ndash;&gt;-->
+
+        <!--</RadioGroup>-->
+
+    </com.iyuba.talkshow.ui.list.MyRadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="难度" />
+
+    <com.iyuba.talkshow.ui.list.MyRadioGroup
+        android:id="@+id/level_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+        </RadioGroup>
+    </com.iyuba.talkshow.ui.list.MyRadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="长度" />
+
+    <com.iyuba.talkshow.ui.list.MyRadioGroup
+        android:visibility="gone"
+        android:id="@+id/time_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+
+            <RadioButton
+                style="@style/TypeSelect"
+                android:text="电影" />
+        </RadioGroup>
+    </com.iyuba.talkshow.ui.list.MyRadioGroup>
+
+
+
+</LinearLayout>

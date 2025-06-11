@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="#ddd"
+    android:id="@+id/imv_input_root">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:padding="3dp"
+        android:background="@null"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/imv_input_dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/imv_input_dismiss"
+            android:padding="3dp"
+            android:textColor="#000" />
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#000"
+            android:textSize="17sp"
+            android:text="@string/imv_input_title" />
+
+        <TextView
+            android:id="@+id/imv_input_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/imv_input_send"
+            android:padding="3dp"
+            android:textColor="#000" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/imv_input_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLength="255"
+        android:selectAllOnFocus="true"
+        android:hint="@string/imv_input_hint"
+        android:textSize="16sp"
+        android:gravity="start"
+        android:maxHeight="70dp"
+        android:padding="2dp"
+        android:textColor="@color/black"
+        android:background="@color/white"
+        android:layout_marginTop="5dp" />
+</LinearLayout>

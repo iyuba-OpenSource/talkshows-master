@@ -1,0 +1,58 @@
+//com.iyuba.talkshow.child-少儿英语
+apply plugin: 'com.mob.sdk'
+MobSDK {
+    appKey "2e0b32640c210"
+    appSecret "0d097d582e617880b2b4c3b36b9387f1"
+    SecVerify {
+
+    }
+    ShareSDK {
+        devInfo {
+            loopShare true
+            Wechat {
+                id 1
+                sortId 1
+                appId "wx58640479f5b61f1c"
+                appSecret "d38773c11ed4550b75ba52bb2484bbe1"
+                userName "gh_afb25ac019c9"
+                path "pages/index/index.html?id=1"
+                withShareTicket truea
+                miniprogramType 2
+            }
+            WechatMoments {
+                id 3
+                sortId 3
+                appId "wx58640479f5b61f1c"
+                appSecret "d38773c11ed4550b75ba52bb2484bbe1"
+            }
+            QQ {
+                id 2
+                sortId 2
+                appId "102013282"
+                appKey "VqyrW2MRHQN6ctvH"
+            }
+            SinaWeibo {
+                id 6
+                sortId 6
+                appKey "2122951410"
+                appSecret "1da732328ff08bc9f4491d847d761e4f"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            QZone {
+                id 4
+                sortId 4
+                appId "102013282"
+                appKey "VqyrW2MRHQN6ctvH"
+            }
+            WechatFavorite {
+                id 5
+                sortId 5
+                AppId="wx58640479f5b61f1c"
+                AppSecret="d38773c11ed4550b75ba52bb2484bbe1"
+            }
+        }
+    }
+    SMSSDK {
+        autoSMS true
+    }
+}

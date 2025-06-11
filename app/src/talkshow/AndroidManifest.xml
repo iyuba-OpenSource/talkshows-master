@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name="com.iyuba.talkshow.wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:taskAffinity="com.iyuba.talkshow"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.iyuba.talkshow.wxapi.WXPayEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW"/>-->
+<!--                <category android:name="android.intent.category.DEFAULT"/>-->
+<!--                <data android:scheme="wxd698c6b5372fd6d0"/>-->
+<!--            </intent-filter>-->
+
+        </activity>
+
+        <!--推送功能-->
+        <!--<meta-data
+            android:name="MIPUSH_APPID"
+            android:value="\ 2882303761517544881" />
+        <meta-data
+            android:name="MIPUSH_APPKEY"
+            android:value="\ 5111754478881" />
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="10803112" />-->
+    </application>
+
+</manifest>

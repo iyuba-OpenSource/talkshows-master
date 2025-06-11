@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.iyuba.iyubamovies.ui.view.OneMv.OneMvSerisesView">
+
+    <RelativeLayout
+        android:id="@+id/imv_video_container"
+        android:layout_width="match_parent"
+        android:layout_height="210dp">
+
+        <com.iyuba.iyubamovies.weight.IMVideoView
+            android:id="@+id/imv_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/imv_back_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black" />
+
+        <ImageView
+            android:id="@+id/imv_circle_progress"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:visibility="gone"
+            android:src="@drawable/imovies_circle_progress" />
+
+        <LinearLayout
+            android:id="@+id/imv_titlebar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#65000000"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/imv_back"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="left"
+                android:padding="8dp"
+                android:gravity="center_vertical"
+                android:src="@drawable/imovies_circle_back"
+                android:minWidth="50dp" />
+            <!--android:src="@drawable/headlines_nav_back_normal"-->
+            <TextView
+                android:id="@+id/imv_titlebar_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:scrollHorizontally="true"
+                android:ellipsize="marquee"
+                android:textColor="#fff"
+                android:textSize="17dp"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/imv_play_state_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#65000000"
+            android:orientation="horizontal"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <ImageView
+                android:id="@+id/imv_pauseorplay"
+                android:layout_width="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_height="30dp"
+                android:src="@drawable/imovies_video_pause" />
+
+            <TextView
+                android:id="@+id/imv_current_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="00:00"
+                android:textColor="#fff" />
+
+            <SeekBar
+                android:id="@+id/imv_seekbar_player"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:maxHeight="2dp"
+                android:minHeight="2dp"
+                android:progress="0"
+                android:progressDrawable="@drawable/imvoies_video_seekbar_style"
+                android:splitTrack="false"
+                android:thumb="@drawable/imovies_video_seekbar_thumb"
+                android:thumbOffset="0dp" />
+
+            <TextView
+                android:id="@+id/imv_total_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:text="00:00"
+                android:textColor="#fff" />
+
+            <ImageButton
+                android:id="@+id/to_tv"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/to_tv"
+                tools:ignore="ContentDescription" />
+
+            <ImageView
+                android:id="@+id/imv_fullscreen"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="3dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/imovies_fullscreen" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/imv_gesture_volume_layout"
+            android:layout_width="120dip"
+            android:layout_height="100dip"
+            android:layout_centerInParent="true"
+            android:background="#65000000"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imv_gesture_iv_player_volume"
+                android:layout_width="40dp"
+                android:layout_height="44dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/imovies_voice" />
+
+            <TextView
+                android:layout_marginTop="2dip"
+                android:id="@+id/imv_geture_tv_volume_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imv_gesture_iv_player_volume"
+                android:layout_centerHorizontal="true"
+                android:gravity="right"
+                android:text="80%"
+                android:textColor="#ffececec" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/imv_gesture_bright_layout"
+            android:layout_width="120dip"
+            android:layout_height="100dip"
+            android:layout_centerInParent="true"
+            android:background="#65000000"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imv_gesture_iv_player_bright"
+                android:layout_width="40dp"
+                android:layout_height="44dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/imovies_bright" />
+
+            <TextView
+                android:layout_marginTop="2dip"
+                android:id="@+id/imv_geture_tv_bright_percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imv_gesture_iv_player_bright"
+                android:layout_centerHorizontal="true"
+                android:gravity="right"
+                android:text="80%"
+                android:textColor="#ffececec" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/imv_gesture_progress_layout"
+            android:layout_width="120dip"
+            android:layout_height="100dip"
+            android:layout_centerInParent="true"
+            android:background="#65000000"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imv_gesture_iv_progress"
+                android:layout_width="44dp"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/imovies_move_fast_forward" />
+
+            <TextView
+                android:id="@+id/imv_gesture_tv_progress_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imv_gesture_iv_progress"
+                android:layout_centerHorizontal="true"
+                android:gravity="right"
+                android:text="00:35/24:89"
+                android:textColor="#ffececec" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/imv_refresh_layout">
+
+        <ScrollView
+            android:id="@+id/imv_scroll_view"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/imv_title"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:text="剧集准备中"
+                    android:padding="8dp" />
+
+                <TextView
+                    android:id="@+id/imv_readcounts"
+                    android:padding="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2次播放" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/imv_comments"
+                        android:layout_marginLeft="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/imovies_commit"
+                        android:drawablePadding="2dp"
+                        android:textSize="15sp"
+                        android:text="0评论"
+                        android:textColor="#000" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/imv_download"
+                        android:layout_marginRight="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/imovies_download"
+                        android:padding="5dp" />
+
+                    <ImageView
+                        android:id="@+id/imv_share"
+                        android:layout_marginRight="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/imovies_share"
+                        android:padding="5dp" />
+
+                    <ImageView
+                        android:id="@+id/imv_collect"
+                        android:layout_marginRight="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:visibility="gone"
+                        android:src="@drawable/imovies_collect" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:padding="2dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="15sp"
+                        android:text="@string/imv_serises"
+                        android:layout_marginLeft="5dp"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/imv_serisecounts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2集全"
+                        android:drawableRight="@drawable/imvoies_rightjt"
+                        android:drawablePadding="10dp" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/imv_serises_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:padding="2dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:textSize="15sp"
+                        android:text="@string/imv_serises_detail"
+                        android:layout_marginLeft="5dp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:id="@+id/imv_changelanguage"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/imovies_changelanguage"
+                        android:layout_marginRight="15dp" />
+                </LinearLayout>
+
+                <com.iyuba.iyubamovies.weight.IMvSubtitleSynView
+                    android:id="@+id/imv_synview"
+                    android:layout_width="match_parent"
+                    android:visibility="gone"
+                    android:layout_height="50dp">
+
+                </com.iyuba.iyubamovies.weight.IMvSubtitleSynView>
+
+                <TextView
+                    android:id="@+id/imv_detail_text"
+                    android:padding="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#000" />
+
+                <LinearLayout
+                    android:padding="2dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:text="@string/imv_commnet_message"
+                        android:layout_marginLeft="5dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/imv_commentstv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0条评论"
+                        android:layout_marginRight="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/imv_usericon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="3dp"
+                        android:src="@drawable/imovies_default_tx" />
+
+                    <TextView
+                        android:id="@+id/imv_inputcomment"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:paddingLeft="12dp"
+                        android:hint="@string/imv_input_ed_content"
+                        android:gravity="center|left"
+                        android:layout_marginRight="13dp"
+                        android:background="@drawable/imv_input_roundrect" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/imv_commentlist"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>

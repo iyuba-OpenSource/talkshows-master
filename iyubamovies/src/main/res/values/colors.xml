@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="imvs_dropdown_more_item_bg">#4a4a4c</color>
+    <color name="imvs_dropdown_selected">#C235F9</color>
+    <color name="imvs_green_unipus">#13bdb1</color>
+    <color name="imvs_transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray">#808080</color>
+    <color name="imvs_royalblue">#4169e1</color>
+    <color name="imvs_cover_layer">#65000000</color>
+    <color name="imvs_toolbar_ripple_color">#fff</color>
+
+    <!-- TabLayout -->
+    <color name="imvs_tab_normal_bg">#f1f2f5</color>
+    <color name="imv_tab_selected_text_color">#5e5e5f</color>
+    <color name="imvs_tab_split_line_color">#c3c3c3</color>
+    <!-- TextContentActivity -->
+    <color name="imvs_title_tip">#989aa6</color>
+    <color name="imvs_title">#393939</color>
+    <color name="imvs_source">#787878</color>
+    <color name="imvs_detail_title">#4d4d4d</color>
+    <color name="imvs_detail_text">#4d4d4d</color>
+    <color name="imvs_detail_share">#491d1e</color>
+    <color name="imvs_detail_share_line">#797979</color>
+    <color name="imvs_highlighted">#0477c7</color>
+    <color name="imvs_video_highlighted">#3bc3fb</color>
+    <!--SmallPicListActivity-->
+    <color name="imvs_list_in_title">#343434</color>
+    <color name="imvs_list_in_desc">#757575</color>
+    <!-- Toolbar -->
+    <color name="imvs_toolbar_title">#343434</color>
+    <color name="imvs_toolbar_split_line">#c3c3c3</color>
+
+    <color name="imvs_comment_name_color">#ff406599</color>
+    <color name="imvs_comment_like_color">#ff505050</color>
+    <color name="imvs_comment_content_color">#ff505050</color>
+    <color name="imvs_base_night_float_color">#8a000000</color>
+</resources>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">iyubamovies</string>
+
+    <string name="imv_input_dismiss">取消</string>
+    <string name="imv_input_send">发送</string>
+    <string name="imv_input_title">写评论</string>
+    <string name="imv_input_hint">最多可以输入255个字符</string>
+
+
+    <string name="imv_get_more">点击显示更多评论</string>
+    <string name="imv_title_content">标题</string>
+    <string name="imv_input_ed_content">我来说两句/点击回复</string>
+    <string name="imv_serises">剧集</string>
+    <string name="imv_serises_detail">剧集详情</string>
+    <string name="imv_commnet_message">评论信息</string>
+    <string name="imv_input_limit">亲,超字数了!</string>
+    <string name="imv_input_nodata">亲,请填写评论!</string>
+    <string name="imvoies_download_text">下载列表</string>
+    <string name="imovies_down_success">已完成</string>
+</resources>

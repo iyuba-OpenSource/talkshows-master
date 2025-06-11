@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:background="@drawable/item_dubbing_corner"
+    android:elevation="1dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/white"
+        android:background="@drawable/index_gray"
+        android:padding="4dp"
+        android:gravity="center"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/index"/>
+
+    <TextView
+        android:id="@+id/sentenceEn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="5dp"
+        android:layout_marginBottom="10dp"
+        
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/score"
+        app:layout_constraintBottom_toTopOf="@id/sentenceCn"
+        />
+
+    <TextView
+        android:id="@+id/sentenceCn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/gray"
+        android:layout_marginBottom="10dp"
+
+        app:layout_constraintLeft_toLeftOf="@id/sentenceEn"
+        app:layout_constraintRight_toRightOf="@id/sentenceEn"
+        app:layout_constraintBottom_toTopOf="@id/bottomLayout"/>
+
+    <!--底部样式-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <com.iyuba.talkshow.ui.widget.DubbingProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/mProgress_horizontal"
+            android:layout_marginEnd="10dp"
+
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/record"
+            app:layout_constraintBottom_toBottomOf="@id/record"
+            app:layout_constraintRight_toLeftOf="@id/play"/>
+
+        <ImageView
+            android:id="@+id/play"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/play"
+            android:layout_marginEnd="10dp"
+
+            app:layout_constraintRight_toLeftOf="@id/record"
+            app:layout_constraintTop_toTopOf="@id/record"
+            app:layout_constraintBottom_toBottomOf="@id/record"/>
+
+        <ImageView
+            android:id="@+id/record"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/record"
+
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

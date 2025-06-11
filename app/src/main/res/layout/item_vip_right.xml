@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff" >
+
+    <ImageView
+        android:id="@+id/vip_right_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/vip_right8" />
+
+    <TextView
+        android:id="@+id/vip_right_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vip_right_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="5dp"
+        android:text="尊贵标识"
+        android:textColor="#a7a7a7" />
+
+    <ImageView
+        android:id="@+id/vip_right_stub"
+        android:layout_width="30dp"
+        android:layout_height="1dp"
+        android:layout_below="@+id/vip_right_text"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+//com.iyuba.talkshow.pig（小猪佩奇）
+apply plugin: 'com.mob.sdk'
+
+MobSDK {
+    appKey "34fc83cc24097"
+    appSecret "136cd2cf0fea3bc60f3ad59681c0c6f7"
+    SecVerify {
+    }
+//    permissions {
+//        exclude "android.permission.RECEIVE_SMS"
+//    }
+    ShareSDK {
+        loopShare true
+        devInfo {
+            Wechat {
+                AppId="wx0caddc6313a39b37"
+                AppSecret="09bc6acf5e69d1f68d8a6baaa7ce36e1"
+                userName "gh_afb25ac019c9"
+                path "pages/index/index.html?id=1"
+                withShareTicket true
+                miniprogramType 2
+            }
+            QQ {
+                appId "1105953236"
+                appKey "idkPVDdY0xrxaoR9"
+            }
+            SinaWeibo {
+                appKey "2122951410"
+                appSecret "1da732328ff08bc9f4491d847d761e4f"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            WechatMoments {
+                AppId="wx0caddc6313a39b37"
+                AppSecret="09bc6acf5e69d1f68d8a6baaa7ce36e1"
+            }
+            WechatFavorite {
+                AppId="wx0caddc6313a39b37"
+                AppSecret="09bc6acf5e69d1f68d8a6baaa7ce36e1"
+            }
+            QZone {
+                appId "1105953236"
+                appKey "idkPVDdY0xrxaoR9"
+            }
+        }
+    }
+    SMSSDK {
+        autoSMS true
+    }
+}

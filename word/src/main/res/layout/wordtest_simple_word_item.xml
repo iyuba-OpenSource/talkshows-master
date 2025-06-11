@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/talkshowword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        tools:text="watch out ！" />
+    <com.iyuba.wordtest.widget.PronTextView
+        android:id="@+id/talkshowpron"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="[]"
+        android:textColor="#A39898"
+        android:layout_marginTop="5dp"
+        android:textSize="14sp" />
+    <TextView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/talkshowdef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="2dp"
+        android:textColor="#333333"
+        android:textSize="14sp" />
+</LinearLayout>

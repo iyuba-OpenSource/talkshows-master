@@ -1,0 +1,5 @@
+huawei
+honor
+xiaomi
+oppo
+vivo

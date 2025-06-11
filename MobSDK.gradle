@@ -1,0 +1,59 @@
+//com.iyuba.talkshow（英语口语秀）
+apply plugin: 'com.mob.sdk'
+
+MobSDK {
+    appKey "16788bea16a01"
+    appSecret "5809c25db8e9137004f0b4d244e256c7"
+    SecVerify {
+//        version '3.0.7'
+    }
+    ShareSDK {
+        loopShare true
+        devInfo {
+            Wechat {
+                id 1
+                sortId 1
+                appId "wxd698c6b5372fd6d0"
+                appSecret "a48764db049301bc3d137d75f35e9784"
+                userName "gh_afb25ac019c9"
+                path "pages/index/index.html?id=1"
+                withShareTicket true
+                miniprogramType 2
+            }
+            QQ {
+                id 2
+                sortId 2
+                appId "1109376878"
+                appKey "UuajNa25gmKSHqlB"
+            }
+            SinaWeibo {
+                id 6
+                sortId 6
+                appKey "2122951410"
+                appSecret "1da732328ff08bc9f4491d847d761e4f"
+                callbackUri "http://www.sharesdk.cn"
+            }
+            WechatMoments {
+                id 3
+                sortId 3
+                appId "wxd698c6b5372fd6d0"
+                appSecret "a48764db049301bc3d137d75f35e9784"
+            }
+            WechatFavorite {
+                id 4
+                sortId 4
+                appId "wxd698c6b5372fd6d0"
+                appSecret "a48764db049301bc3d137d75f35e9784"
+            }
+            QZone {
+                id 5
+                sortId 5
+                appId "1109376878"
+                appKey "UuajNa25gmKSHqlB"
+            }
+        }
+    }
+    SMSSDK {
+        autoSMS true
+    }
+}

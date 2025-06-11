@@ -1,0 +1,11 @@
+include ':app', ':dlna-lib'
+
+//include ':iseDemo'
+
+//include ':dailybonus'
+//project(':dailybonus').projectDir = new File(settingsDir, '../iyuba-demo/dailybonus')
+//include ':javalib'
+include ':word'
+include ':iyubamovies'
+include ':lib_common'
+include ':lib_user'

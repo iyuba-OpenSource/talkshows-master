@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="iyubi_amounts">
+        <item>210</item>
+        <item>650</item>
+        <item>1100</item>
+        <item>6600</item>
+        <item>12000</item>
+    </integer-array>
+
+    <string-array name="detail_page_title">
+        <item>简介</item>
+        <item>排行</item>
+        <item>专辑</item>
+        <item>相关</item>
+    </string-array>
+
+    <string-array name="detail_page_title_default">
+        <item>简介</item>
+        <item>排行</item>
+        <item>相关</item>
+    </string-array>
+
+    <string-array name="course_page_drop">
+        <item>人教版</item>
+        <item>外研社</item>
+    </string-array>
+
+    <string-array name="course_page_catagory_renjiao">
+        <item>新起点</item>
+        <item>PEP</item>
+        <item>精通</item>
+        <item>初中</item>
+    </string-array>
+
+    <string-array name="course_page_catagory_id_renjiao">
+        <item>313</item>
+        <item>314</item>
+        <item>315</item>
+        <item>316</item>
+    </string-array>
+
+    <string-array name="course_page_catagory_waiyan">
+        <item>一起点</item>
+        <item>三起点</item>
+    </string-array>
+
+
+    <string-array name="course_page_catagory_id_waiyan">
+        <item>318</item>
+        <item>317</item>
+    </string-array>
+
+    <!-- old stuff transfer, should be deprecate -->
+    <string-array name="my_dubbing_page_title">
+        <item>已发布</item>
+        <item>草稿箱</item>
+        <item>已下载</item>
+
+        <!--        <item>未发布</item>-->
+    </string-array>
+
+    <string-array name="hint">
+        <item>下拉列表可以刷新</item>
+        <item>您可以只播放收藏列表中的文章</item>
+        <item>消息中心查看其他人的回复</item>
+        <item>点击最新可以查看其他类别</item>
+        <item>点击原文单词可以查询释义</item>
+        <item>长按原文可以跳转到指定段落</item>
+        <item>可以在设置中选择功能</item>
+        <item>“发现”中有精彩内容等待您体验</item>
+        <item>单词同步功能可以将您在其他应用中收藏的单词同步至本应用</item>
+    </string-array>
+    <string-array name="promotion_channels">
+        <item>@string/channel_none</item>
+    </string-array>
+
+    <string-array name="promotion_channel_images">
+        <item>@drawable/base</item>
+    </string-array>
+
+    <!-- vip rights -->
+    <string-array name="vip_rights_images">
+        <item>@drawable/vip_right0</item>
+        <item>@drawable/vip_right1</item>
+        <item>@drawable/vip_right2</item>
+        <item>@drawable/vip_right3</item>
+        <item>@drawable/vip_right4</item>
+        <item>@drawable/vip_right5</item>
+        <item>@drawable/vip_right6</item>
+        <item>@drawable/vip_right7</item>
+        <item>@drawable/vip_right8</item>
+    </string-array>
+
+    <!-- pay information -->
+    <string-array name="vip_rights_description">
+        <item>无广告</item>
+        <item>尊贵标识</item>
+        <item>调节语速</item>
+        <item>高速下载</item>
+        <item>查看解析</item>
+        <item>智能化评测</item>
+        <item>无限下载</item>
+        <item>全部应用</item>
+        <item>换话费</item>
+    </string-array>
+
+    <string-array name="iyubi_images">
+        <item>@drawable/iyubi_210</item>
+        <item>@drawable/iyubi_650</item>
+        <item>@drawable/iyubi_1100</item>
+        <item>@drawable/iyubi_6600</item>
+        <item>@drawable/iyubi_12000</item>
+    </string-array>
+
+    <string-array name="iyubi_prices">
+        <item>19.9</item>
+        <item>59.9</item>
+        <item>99.9</item>
+        <item>599</item>
+        <item>999</item>
+    </string-array>
+
+    <string-array name="pay_methods_images">
+        <item>@drawable/ic_pay_alipay</item>
+<!--        <item>@drawable/ic_pay_wxpay</item>-->
+    </string-array>
+
+    <string-array name="pay_method_names">
+        <item>支付宝支付</item>
+<!--        <item>微信支付</item>-->
+    </string-array>
+
+    <string-array name="pay_method_hints">
+        <item>推荐有支付宝账号的用户使用</item>
+<!--        <item>推荐安装微信5.0及以上版本的使用</item>-->
+    </string-array>
+
+    <string-array name="gender">
+        <item>保密</item>
+        <item>男</item>
+        <item>女</item>
+    </string-array>
+    
+    <string-array name="child_small_video_title">
+        <item>影视</item>
+        <item>音乐</item>
+        <item>中国</item>
+        <item>商业</item>
+        <item>科技</item>
+        <item>校园</item>
+        <item>体育</item>
+        <item>旅行</item>
+        <item>人文</item>
+        <item>学习</item>
+    </string-array>
+    <string-array name="child_small_video_code">
+        <item>@integer/headline_video_category_code_movie</item>
+        <item>@integer/headline_video_category_code_music</item>
+        <item>@integer/headline_video_category_code_china</item>
+        <item>@integer/headline_video_category_code_business</item>
+        <item>@integer/headline_video_category_code_technology</item>
+        <item>@integer/headline_video_category_code_campus</item>
+        <item>@integer/headline_video_category_code_sport</item>
+        <item>@integer/headline_video_category_code_trip</item>
+        <item>@integer/headline_video_category_code_culture</item>
+        <item>@integer/headline_video_category_code_study</item>
+    </string-array>
+
+</resources>
